@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Search for SKU</title>
+</head>
+<body>
+    <h1>Search for SKU</h1>
+    <form method="POST">
+        Enter SKU: <input type="text" name="sku" required>
+        <input type="submit" value="Search">
+    </form>
+
+    {% if sneakersjoint_details is not none and not sneakersjoint_details.empty %}
+        <h2>Sneakersjoint Results:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>SKU</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for _, row in sneakersjoint_details.iterrows() %}
+                    <tr>
+                        <td>{{ row['Model'] }}</td>
+                        <td>{{ row['SKU'] }}</td>
+                        <td>{{ row['Size'] }}</td>
+                        <td>{{ row['Price'] }} zł</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</body>
+</html>
