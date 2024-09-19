@@ -1,7 +1,4 @@
 import re
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
 from sneakersjoint import get_product_links_for_sku as sj_get_product_links, get_product_details as sj_get_product_details
 
 def extract_keywords(model_name):
