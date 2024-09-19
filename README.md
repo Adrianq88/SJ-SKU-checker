@@ -4,7 +4,8 @@ SJ-SKU-Checker to aplikacja umożliwiająca pobieranie informacji o rozmiarach i
 
 ## Wymagania
 Python 3.x
+
 Pakiety:
-requests
-beautifulsoup4
-pandas
+-requests
+-beautifulsoup4
+-pandas
